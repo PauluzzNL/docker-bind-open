@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  bind:
+    build: .
+    image: pauluzznl/bind-open:latest
+    container_name: bind-op
+    restart: always
+    ports:
+      - 53:53/udp
+      - 53:53/tcp

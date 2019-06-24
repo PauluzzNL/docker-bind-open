@@ -1,0 +1,23 @@
+$TTL 14400
+@       IN      SOA     ns1.example.com.      info.example.com. (
+                                                2019011401
+                                                14400
+                                                3600
+                                                864000
+                                                86400
+                                                )
+
+example.com.   14400   IN      NS      ns1.example.com.
+example.com.   14400   IN      NS      ns2.example.com.
+
+ns1.example.com.   14400   IN      A       0.0.0.0
+ns2.example.com.   14400   IN      A       0.0.0.0
+example.com.   14400   IN      A       0.0.0.0
+localhost       14400   IN      A       127.0.0.1
+mail.example.com.      14400   IN      A       0.0.0.0
+
+
+*.example.com. 14400   IN      A       0.0.0.0
+
+example.com.   14400   IN      MX      10 mail
+example.com.   14400   IN      TXT     "v=spf1 a mx ip4:0.0.0.0 -all"
